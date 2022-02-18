@@ -1,0 +1,64 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Portal</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="LogBG">
+            <div class="box signin">
+                <h2>Already Have an Account?</h2>
+                <button class="signinbut">Sign in</button>
+            </div>
+            <div class="box register">
+                <h2>New to this?</h2>
+                <button class="regbut">Register</button>
+            </div>
+        </div>
+        <div class="formBx">
+            <div class="signinForm">
+                <form>
+                    <h3>Sign In</h3>
+                    <input type="text" placeholder="Username">
+                    <input type="password" placeholder="Password">
+                    <input type="submit" value="Login">
+                    <a href="#" class="forgot">Forgot Password</a>
+                </form>
+            </div>
+            <div class="regForm">
+                <form>
+                    <h3>Register</h3>
+                    <input type="text" placeholder="Fullname">
+                    <input type="text" placeholder="Username">
+                    <input type="text" placeholder="Email Address">
+                    <input type="password" placeholder="Password">
+                    <input type="password" placeholder="Confirm Password">
+                    <input type="submit" value="Let's Get Started">
+                </form>
+            </div>
+        </div>
+    </div>
+    <script>
+        const signinbut = document.querySelector('.siginbut');
+        const regbut = document.querySelector('.regbut');
+        const formBx = document.querySelector('.formBx');
+        const body = document.querySelector('body');
+
+
+        regbut.onclick = function() {
+            formBx.classList.add('active')
+            body.classList.add('active')
+        }
+
+        signinbut.onclick = function() {
+            formBx.classList.remove('active')
+            body.classList.remove('active')
+        }
+    </script>
+</body>
+
+</html>
